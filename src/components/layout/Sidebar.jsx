@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Icon from '../ui/Icon'
 import Logo from '../ui/Logo'
 import { navSections } from '../../data/dashboard'
 
 export default function Sidebar() {
-  const [active, setActive] = useState('dashboard-dan-analitik')
+  const { pathname } = useLocation()
+
+  const isActive = (path) =>
+    path === '/' ? pathname === '/' : pathname === path || pathname.startsWith(`${path}/`)
 
   return (
     <aside className="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between">
@@ -37,25 +40,21 @@ export default function Sidebar() {
                   </span>
                 </div>
                 {section.items.map((item) => {
-                  const isActive = active === item.id
+                  const active = isActive(item.path)
                   return (
-                    <a
+                    <Link
                       key={item.id}
-                      href="#"
-                      aria-current={isActive ? 'page' : undefined}
-                      onClick={(e) => {
-                        e.preventDefault()
-                        setActive(item.id)
-                      }}
+                      to={item.path}
+                      aria-current={active ? 'page' : undefined}
                       className={`flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors ${
-                        isActive
+                        active
                           ? 'bg-primary-container text-on-primary font-bold'
                           : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface'
                       }`}
                     >
                       <Icon name={item.icon} className="text-[18px]" />
                       <span className="font-body-md text-body-md">{item.label}</span>
-                    </a>
+                    </Link>
                   )
                 })}
               </div>

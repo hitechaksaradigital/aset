@@ -8,31 +8,31 @@ export const navSections = [
   {
     title: 'Ikhtisar Utama',
     items: [
-      { id: 'dashboard-dan-analitik', label: 'Dashboard & Analitik', icon: 'dashboard' },
+      { id: 'dashboard-dan-analitik', label: 'Dashboard & Analitik', icon: 'dashboard', path: '/' },
     ],
   },
   {
     title: 'Pendataan & Registri',
     items: [
-      { id: 'katalog-dan-inventaris', label: 'Katalog Aset', icon: 'inventory_2' },
-      { id: 'scanner-qr-barcode', label: 'Scanner QR / Barcode', icon: 'qr_code_scanner' },
-      { id: 'kategori-dan-lokasi', label: 'Kategori & Lokasi', icon: 'hub' },
+      { id: 'katalog-dan-inventaris', label: 'Katalog Aset', icon: 'inventory_2', path: '/katalog-aset' },
+      { id: 'scanner-qr-barcode', label: 'Scanner QR / Barcode', icon: 'qr_code_scanner', path: '/scanner-qr-barcode' },
+      { id: 'kategori-dan-lokasi', label: 'Kategori & Lokasi', icon: 'hub', path: '/kategori-dan-lokasi' },
     ],
   },
   {
     title: 'Operasional',
     items: [
-      { id: 'pemeliharaan-dan-tiket', label: 'Pemeliharaan & SLA', icon: 'build_circle' },
-      { id: 'transaksi-peminjaman', label: 'Peminjaman (Check-in/Out)', icon: 'sync_alt' },
-      { id: 'pelepasan-aset', label: 'Pelepasan Aset (Disposal)', icon: 'delete_sweep' },
+      { id: 'pemeliharaan-dan-tiket', label: 'Pemeliharaan & SLA', icon: 'build_circle', path: '/pemeliharaan-dan-tiket' },
+      { id: 'transaksi-peminjaman', label: 'Peminjaman (Check-in/Out)', icon: 'sync_alt', path: '/transaksi-peminjaman' },
+      { id: 'pelepasan-aset', label: 'Pelepasan Aset (Disposal)', icon: 'delete_sweep', path: '/pelepasan-aset' },
     ],
   },
   {
     title: 'Kepatuhan & Sistem',
     items: [
-      { id: 'transaksi-dan-audit-log', label: 'Laporan Audit Trail', icon: 'verified' },
-      { id: 'log-aktivitas', label: 'Log Aktivitas', icon: 'history' },
-      { id: 'pengaturan-rbac', label: 'Pengaturan RBAC', icon: 'admin_panel_settings' },
+      { id: 'transaksi-dan-audit-log', label: 'Laporan Audit Trail', icon: 'verified', path: '/laporan-audit-trail' },
+      { id: 'log-aktivitas', label: 'Log Aktivitas', icon: 'history', path: '/log-aktivitas' },
+      { id: 'pengaturan-rbac', label: 'Pengaturan RBAC', icon: 'admin_panel_settings', path: '/pengaturan-rbac' },
     ],
   },
 ]
