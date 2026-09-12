@@ -76,7 +76,7 @@ export const allocationSegments = [
     label: 'IT & Komputasi',
     value: 38,
     amount: 'Rp 32,1 M',
-    color: '#121358',
+    color: '#123B6D',
     textClass: 'text-primary-container',
   },
   {
@@ -90,14 +90,14 @@ export const allocationSegments = [
     label: 'Alat Berat & Mesin',
     value: 22,
     amount: 'Rp 18,6 M',
-    color: '#4e599e',
+    color: '#33598F',
     textClass: 'text-secondary',
   },
   {
     label: 'Kendaraan Dinas',
     value: 12,
     amount: 'Rp 10,2 M',
-    color: '#bbc3ff',
+    color: '#AFC6E3',
     textClass: 'text-on-secondary-container',
   },
 ]

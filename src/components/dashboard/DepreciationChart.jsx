@@ -36,17 +36,17 @@ export default function DepreciationChart() {
               <stop offset="100%" stopColor="#08968d" stopOpacity="0.0"></stop>
             </linearGradient>
             <linearGradient id="chartGradientNavy" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#121358" stopOpacity="0.15"></stop>
-              <stop offset="100%" stopColor="#121358" stopOpacity="0.0"></stop>
+              <stop offset="0%" stopColor="#123B6D" stopOpacity="0.18"></stop>
+              <stop offset="100%" stopColor="#123B6D" stopOpacity="0.0"></stop>
             </linearGradient>
           </defs>
 
           {/* Gridlines */}
-          <line stroke="#d4e3ff" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="30" y2="30"></line>
-          <line stroke="#d4e3ff" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="75" y2="75"></line>
-          <line stroke="#d4e3ff" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="120" y2="120"></line>
-          <line stroke="#d4e3ff" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="165" y2="165"></line>
-          <line stroke="#c7c5d2" strokeWidth="1" x1="40" x2="520" y1="200" y2="200"></line>
+          <line stroke="#CEDBEA" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="30" y2="30"></line>
+          <line stroke="#CEDBEA" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="75" y2="75"></line>
+          <line stroke="#CEDBEA" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="120" y2="120"></line>
+          <line stroke="#CEDBEA" strokeDasharray="3 3" strokeWidth="0.75" x1="40" x2="520" y1="165" y2="165"></line>
+          <line stroke="#C1CEDD" strokeWidth="1" x1="40" x2="520" y1="200" y2="200"></line>
 
           {/* Label sumbu Y */}
           <text className="font-data-code text-[9px] fill-on-surface-variant" x="10" y="34">100M</text>
@@ -63,7 +63,7 @@ export default function DepreciationChart() {
           <polyline
             fill="none"
             points="60,110 160,95 260,80 360,65 480,50"
-            stroke="#121358"
+            stroke="#123B6D"
             strokeWidth="2.5"
           ></polyline>
 
@@ -80,11 +80,11 @@ export default function DepreciationChart() {
           ></polyline>
 
           {/* Titik data Perolehan */}
-          <circle cx="60" cy="110" fill="#121358" r="4"></circle>
-          <circle cx="160" cy="95" fill="#121358" r="4"></circle>
-          <circle cx="260" cy="80" fill="#121358" r="4"></circle>
-          <circle cx="360" cy="65" fill="#121358" r="4"></circle>
-          <circle cx="480" cy="50" fill="#121358" r="4"></circle>
+          <circle cx="60" cy="110" fill="#123B6D" r="4"></circle>
+          <circle cx="160" cy="95" fill="#123B6D" r="4"></circle>
+          <circle cx="260" cy="80" fill="#123B6D" r="4"></circle>
+          <circle cx="360" cy="65" fill="#123B6D" r="4"></circle>
+          <circle cx="480" cy="50" fill="#123B6D" r="4"></circle>
 
           {/* Titik data Nilai Buku */}
           <circle cx="60" cy="120" fill="#08968d" r="4"></circle>
