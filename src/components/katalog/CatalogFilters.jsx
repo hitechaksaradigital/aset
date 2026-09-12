@@ -1,5 +1,5 @@
 import Icon from '../ui/Icon'
-import { filterOptions, totalAssets } from '../../data/katalogAset'
+import { filterOptions } from '../../data/katalogAset'
 
 /**
  * Search & multi-parameter filter bar dengan tag filter aktif.
@@ -18,6 +18,7 @@ export default function CatalogFilters({
   activeFilters,
   onReset,
   visibleCount,
+  totalCount,
 }) {
   const selectClass =
     'w-full h-10 px-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none cursor-pointer'
@@ -131,7 +132,7 @@ export default function CatalogFilters({
           Reset Semua
         </button>
         <span className="ml-auto font-data-code text-data-code text-on-surface-variant">
-          Menampilkan {visibleCount} dari {totalAssets} baris terverifikasi
+          Menampilkan {visibleCount} dari {totalCount} baris terverifikasi
         </span>
       </div>
     </div>

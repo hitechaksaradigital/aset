@@ -1,13 +1,14 @@
 import Icon from '../ui/Icon'
-import { catalogKpis } from '../../data/katalogAset'
+import { catalogKpis as defaultKpis } from '../../data/katalogAset'
 
 /**
  * Ringkasan telemetri KPI katalog (4 kartu dengan progress bar).
+ * Data dihitung dari database Supabase via prop `kpis`.
  */
-export default function CatalogKpiCards() {
+export default function CatalogKpiCards({ kpis = defaultKpis }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
-      {catalogKpis.map((kpi) => (
+      {kpis.map((kpi) => (
         <div
           key={kpi.label}
           className="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between"

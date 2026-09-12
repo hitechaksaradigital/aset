@@ -3,7 +3,7 @@ import Icon from '../ui/Icon'
 /**
  * Banner konteks atas + quick action bar (Impor CSV, Cetak Label, Registrasi).
  */
-export default function CatalogHeader() {
+export default function CatalogHeader({ onRegister }) {
   return (
     <div className="w-full bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
       <div className="flex flex-col max-w-2xl">
@@ -45,6 +45,7 @@ export default function CatalogHeader() {
         <button
           className="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary shadow-sm hover:shadow transition-all"
           type="button"
+          onClick={onRegister}
         >
           <Icon name="add_circle" className="text-[18px]" />
           <span>+ Registrasi Aset Baru</span>

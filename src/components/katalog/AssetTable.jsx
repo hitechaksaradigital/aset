@@ -5,7 +5,15 @@ import { statusBadge } from '../../data/katalogAset'
 /**
  * Tabel inventaris padat (dense industrial table) + toolbar & pagination.
  */
-export default function AssetTable({ rows, selectedId, onSelect, checkedIds, onToggleCheck, onToggleAll }) {
+export default function AssetTable({
+  rows,
+  total,
+  selectedId,
+  onSelect,
+  checkedIds,
+  onToggleCheck,
+  onToggleAll,
+}) {
   const [page, setPage] = useState(1)
   const allChecked = rows.length > 0 && rows.every((row) => checkedIds.has(row.id))
 
@@ -185,7 +193,7 @@ export default function AssetTable({ rows, selectedId, onSelect, checkedIds, onT
             <option>100</option>
           </select>
           <span className="font-data-code text-data-code text-on-surface-variant ml-2">
-            1 - {rows.length || 0} dari 4.820 aset
+            1 - {rows.length || 0} dari {total} aset
           </span>
         </div>
         <div className="flex items-center gap-1">
